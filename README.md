@@ -13,20 +13,25 @@ Servidor web que soporta una funcionalidad similar a la de Spark, utilizando fun
    
       ![image](https://github.com/XimenaRodriguez20/AREP-Taller1/assets/123812926/5bb9d75f-df71-4dd7-8ce2-b8f1b2b4ea7b)
                          
-      <code>git clone https://github.com/XimenaRodriguez20/AREP-Taller2.git</code>
-                                                                      
-      ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/695bf447-60b5-4f80-ba29-d5ee04e34f87)
+      <code>git clone https://github.com/XimenaRodriguez20/AREP-Taller3.git</code>                                                                     
 
   * Para poder correr el codigo abra el IDE de su preferencia y ejecute la clase: 
-     - HttpServer
+     - App
 
-       ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/575ccaee-8bed-4226-bf84-adce1706f9d0)
+       ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/f43eb5b4-fcdc-482a-bda4-40d8eadbd8c4)
+
   
-  * Para evidenciar lo que puede hacer nuestra aplicación, abrimos un navergador web y escribrimos **localhost:35000/movies.html** y apenas cargue mostrara lo siguiente:
+  * Para evidenciar lo que hace nuestro servidor con la petición get, abrimos un navergador web y escribrimos **localhost:35000/action/hola** :
 
-     ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/4ef3a776-1a0d-4ed8-be75-f9313e6dd20f)
+     ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/9346c6b0-4c94-4a0d-9cf6-6b5a1d1322ce)
 
-  Como podemos evidenciar esta jalando los archivos que se encuentran en disco como movies.html y los styles.css por eso ya tiene un poco de diseño la pagina web.
+  Para evidenciar que esta jalando los archivos estaticos como html, css, js, escribimos en el navegador **localhost:35000/[respectivo archivo estatico que desee consultar]** 
+   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/4c75ba74-a898-4c73-8de6-b16b7b607852)
+
+   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/7b813e25-08a4-448b-b274-06ae23e97465)
+
+   ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/5ab8527a-e656-4d8f-841f-4703e2024329)
+
 
   * Para buscar una pelicula debemos escribir el nombre de la pelicula y darle click al boton, en caso contrario si solo damos enter no nos va a dar ninguna información:
     
@@ -36,15 +41,23 @@ Servidor web que soporta una funcionalidad similar a la de Spark, utilizando fun
 
   * Para evidenciar que se esta obteniendo las imagenes desde el disco local, escribimos en el path de la pagina web el nombre del las imagenes que tenemos en disco local que son: john.jpeg y dolphin.jpg
 
-    ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/22a4bec6-b9a0-4672-a43d-e57cdc19a10c)
+    ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/33193bfe-2e17-4e0f-bb59-7cd120c0d139)
 
     ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/7faedfe9-51ea-4186-aecd-68ef24dec66a)
 
     ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/09f7d8bf-f2e2-489d-a931-63482627f7bb)
 
-  *Además tambien en los archivos que se encuentran en el disco local tenemos un html diferente del que nos proporciona la información de las peliculas, lo cual nos asegura que si esta leyendo diferentes       formatos
+* Para la petición post, se puede probar colocando el siguiente path http://localhost:35000/action/recibido:
 
-   ![image](https://github.com/XimenaRodriguez20/AREP-Taller2/assets/123812926/4821c6b1-622c-4cff-8eca-074a3f72255a)
+    ![image](https://github.com/XimenaRodriguez20/AREP-Taller3/assets/123812926/25e6b416-250d-4272-8702-d2f11fd01999)
+
+## Arquitectura del programa
+
+   HttpServer
+    Es la clase que obtendra las solicitudes  y se encargara respectivamente de retonar la información que se solicita
+
+   App 
+    Sera quien nos permita ejecutar el servidor y asi mismo quien tendra las indicaciones lambda
 
 ## Prerequisitos 
 
